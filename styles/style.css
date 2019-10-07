@@ -60,6 +60,31 @@
 .highlight .ow{color:#000000;font-weight:bold}
 .highlight .o{color:#000000;font-weight:bold}
 .highlight .w{color:#bbbbbb}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-right: 5px;
+    padding: 5px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    height: 100px;
+    max-width: 90%;
+  }
+  .container {
+    padding: 2px 16px;
+  }
+
+  .cardbox{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    text-align: center
+  }
+
 .highlight{background-color:#f8f8f8}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -99,11 +124,16 @@ th{font-family:'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;p
 td{padding:10px;border:1px solid #373737}
 form{background:#f2f2f2;padding:20px}
 .outer{width:100%}
-.inner{position:relative;max-width:640px;padding:20px 10px;margin:0 auto}
-#forkme_banner{display:block;position:absolute;top:0;right:10px;z-index:10;padding:10px 50px 10px 10px;color:#fff;background:url("GitHub-Mark-Light-32px.png") #94b0da no-repeat 95% 50%;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.5);border-bottom-left-radius:2px;border-bottom-right-radius:2px} 
-#header_wrap{background:#343f3e;background:-moz-linear-gradient(top, #373737, #343f3e);background:-webkit-linear-gradient(top, #373737, #343f3e);background:-ms-linear-gradient(top, #373737, #343f3e);background:-o-linear-gradient(top, #373737, #343f3e);background:linear-gradient(to top, #373737, #343f3e)}
-#header_wrap .inner{padding:50px 10px 30px 10px}
-#project_title{margin:0;color:#fff;font-size:42px;font-weight:700;text-shadow:#111 0px 0px 10px}
+.inner{position:relative;max-width:900px;padding:10px 10px;margin:0 auto}
+#forkme_banner{display:block;position:absolute;top:0;right:10px;z-index:10;padding:10px 50px 10px 10px;color:#fff;background:url("../img/GitHub-Mark-Light-32px.png") #94b0da no-repeat 95% 50%;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.5);border-bottom-left-radius:2px;border-bottom-right-radius:2px} 
+
+#header_wrap{
+  position: fixed;
+  z-index: 1;
+
+  background:#343f3e;background:-moz-linear-gradient(top, #373737, #343f3e);background:-webkit-linear-gradient(top, #373737, #343f3e);background:-ms-linear-gradient(top, #373737, #343f3e);background:-o-linear-gradient(top, #373737, #343f3e);background:linear-gradient(to top, #373737, #343f3e)}
+#header_wrap .inner{padding-top:40px}
+#project_title{margin:0 auto;color:#fff;text-shadow:#111 0px 0px 10px; text-align: center}
 #project_tagline{color:#fff;font-size:24px;font-weight:300;background:none;text-shadow:#111 0px 0px 10px}
 #downloads{position:absolute;width:210px;z-index:10;bottom:-40px;right:0;height:70px;background:url("../images/icon_download.png") no-repeat 0% 90%}
 .zip_download_link{display:block;float:right;width:90px;height:70px;text-indent:-5000px;overflow:hidden;background:url(../images/sprite_download.png) no-repeat bottom left}
@@ -111,8 +141,8 @@ form{background:#f2f2f2;padding:20px}
 .zip_download_link:hover{background:url(../images/sprite_download.png) no-repeat top left}
 .tar_download_link:hover{background:url(../images/sprite_download.png) no-repeat top right}
 #main_content_wrap{background:#f2f2f2;border-top:1px solid #111;border-bottom:1px solid #111}
-#main_content{padding-top:40px}
-#footer_wrap{background:#343f3e}
+#main_content{padding-top:20px; margin-top: 290px}
+#footer_wrap{background-color: #373737}
 @media screen and (max-width: 992px){img{max-width:100%}
 }
 @media screen and (max-width: 480px){body{font-size:14px}
@@ -138,4 +168,71 @@ h4{font-size:16px}
 h5{font-size:14px}
 h6{font-size:12px}
 code,pre{min-width:240px;max-width:320px;font-size:11px}
+}
+
+.menu {
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  
+}
+
+#refinement-image {
+  margin: 0 auto;
+  text-align: center
+}
+
+#refinement-image img {
+  margin-left: -10px;
+  padding: 0;
+}
+
+#menu-center {
+  margin: 0 auto;
+  text-align: center
+}
+
+#menu-center ul {
+  margin: 5px 0 0 0;
+}
+#menu-center ul li {
+  list-style: none;
+  margin: 0 0 0 0;
+  display: inline;
+}
+
+#menu-center ul li a  {
+  padding: 25px;
+}
+
+#menu-center ul li a:hover{
+  /* background-color: #ccc; */
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none
+}
+
+#menu-center ul li a:link  {
+  text-decoration: none;
+}
+
+#process {
+  text-align: justify;
+}
+
+.menu a {
+  color: #cccccc
+}
+
+.active {
+  color: #fff !important;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.refinement {
+  display: none;
 }
