@@ -236,3 +236,7 @@ code,pre{min-width:240px;max-width:320px;font-size:11px}
 .refinement {
   display: none;
 }
+
+#img-lumi {
+  text-align: center;
+}

@@ -45,13 +45,16 @@ function onScroll(event){
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#menu-center ul li a').removeClass("active");
             currLink.addClass("active");
-            $('div#menu-center').css('margin-top','-25px');
-            $('div#project_title').css('margin-top','-55px');
+            $('div#menu-center').css('margin-top','-65px');
+            $('div#img-lumi').css('text-align', 'left');
+            $('#img-lumi img').css('height', '90px');
         }
         else{
-            if($('.active').length == 0 || scrollPos == 0)    {
+            if( scrollPos == 0)    {
                 $('div#menu-center').css('margin-top','0');
-                $('div#project_title').css('margin-top','0');    
+                $('div#img-lumi').css('text-align', 'center');
+                $('#img-lumi img').css('height', '150px');
+    
             }
             currLink.removeClass("active");
         }
