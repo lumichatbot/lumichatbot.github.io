@@ -27,9 +27,9 @@ $(document).ready(function () {
             menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-320
+            'scrollTop': $target.offset().top
         }, 500, 'swing', function () {
-            window.location.position = $target.offset().top-320;
+            window.location.position = $target.offset().top;
             $(document).on("scroll", onScroll);
         });
     });
@@ -47,12 +47,14 @@ function onScroll(event){
             currLink.addClass("active");
             $('div#menu-center').css('margin-top','-65px');
             $('div#img-lumi').css('text-align', 'left');
-            $('#img-lumi img').css('height', '90px');
+            $('div#img-lumi').css('margin-top', '-55px');
+            $('#img-lumi img').css('height', '65px');
         }
         else{
             if( scrollPos == 0)    {
                 $('div#menu-center').css('margin-top','0');
                 $('div#img-lumi').css('text-align', 'center');
+                $('div#img-lumi').css('margin-top', '0');
                 $('#img-lumi img').css('height', '150px');
     
             }
