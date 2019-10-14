@@ -27,9 +27,9 @@ $(document).ready(function () {
             menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
+            'scrollTop': $target.offset().top-65
         }, 500, 'swing', function () {
-            window.location.position = $target.offset().top;
+            window.location.position = $target.offset().top-65;
             $(document).on("scroll", onScroll);
         });
     });
