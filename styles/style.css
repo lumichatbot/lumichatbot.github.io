@@ -64,8 +64,10 @@
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    margin-right: 5px;
+    margin: 5px;
     padding: 5px;
+    width: 30%;
+    background: white;
   }
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -74,14 +76,16 @@
   .card img {
     height: 100px;
     max-width: 90%;
+    object-fit: contain;
   }
   .container {
     padding: 2px 16px;
   }
 
-  .cardbox{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
+  .cardbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     text-align: center
   }
 
