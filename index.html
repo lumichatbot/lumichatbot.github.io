@@ -39,7 +39,7 @@
             <li><a href="#about">About</a></li>
 
             <li><a href="#refinement">Intent Refinement</a></li>
-            
+
             <li><a href="#datasets">Datasets</a>
 
             <li><a href="#code">Code</a></li>
@@ -153,13 +153,15 @@
               contradictions arising from incremental intent deployment. We assume a <em>conflict</em> occurs when the
               conigurations of distinct policies on a device act on the same traic (<em>e.g.</em>, one policy allowing
               and other dropping packets on a irewall); and
-              a <em>contradiction</em> occurs when the high-level behavior description contradicts previously deployed intents,
+              a <em>contradiction</em> occurs when the high-level behavior description contradicts previously deployed
+              intents,
               but the resulting conigurations do not necessarily conlict (<em>e.g.</em>, an intent
               to drop speciic packets on a irewall <em>vs</em> an intent to reroute
               the same packets so that they do not go through the firewall).
               As we use the <em>Nile</em> representation for contradiction analysis,
               its reduced grammar and small number of entities limit the
-              scope of possible contradictions and simplify the contradiction detection. From the <em>Nile</em> intents, we
+              scope of possible contradictions and simplify the contradiction detection. From the <em>Nile</em> intents,
+              we
               extract 15 features
               and correlate them, using a Random Forest Classifier, to produce a single indicator of contradiction. When
               a contradiction is detected, we inform the user through the Lumi user
@@ -169,19 +171,20 @@
 
           <div id="deployment" class="refinement">
 
-              <h4>Intent deployment</h4>
+            <h4>Intent deployment</h4>
 
-              <p>
-                We translate the <em>Nile</em> intent (free of
-                contradictions) to a network policy expressed in <em>Merlin</em>.
-                By relying on Merlin, we take advantage of its dynamic
-                bandwidth allocation and conlict detection at the networkconiguration level. Because Merlin does not support all the
-                features in <em>Nile</em>, we incorporate intent management support
-                for deployment of temporal policies and bandwidth quotas.
-                If any coniguration conlicts arise in this stage, we warn the
-                operator through the Lumi user interface and request the
-                process to be restarted.
-              </p>
+            <p>
+              We translate the <em>Nile</em> intent (free of
+              contradictions) to a network policy expressed in <em>Merlin</em>.
+              By relying on Merlin, we take advantage of its dynamic
+              bandwidth allocation and conlict detection at the networkconiguration level. Because Merlin does not
+              support all the
+              features in <em>Nile</em>, we incorporate intent management support
+              for deployment of temporal policies and bandwidth quotas.
+              If any coniguration conlicts arise in this stage, we warn the
+              operator through the Lumi user interface and request the
+              process to be restarted.
+            </p>
           </div>
 
         </div><!-- process -->
@@ -193,12 +196,12 @@
       <div id="datasets">
         <h2>Datasets</h2>
         <h3>Alpha</h3>
-        <p>Manufactured dataset. Available at <a
+        <p>Manufactured hand-annotated dataset with 70 examples of network intents. Available at <a
             href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/extraction_alpha.json">Github</a></p>
 
         <h3>Campi</h3>
         <p>
-          Public policies of 30 campus networks of US universities. Available at <a
+          Public policies of 50 campus networks of US universities. Available at <a
             href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/extraction_campi.json">Github</a>
         </p>
         <div class="cardbox">
@@ -258,14 +261,16 @@
           <div class="card">
             <img src="img/universities/Texas_Austin.png" alt="University of Texas - Austin">
             <div class="container">
-              <h4><b><a href="https://ut.service-now.com/utss/KAhome.do?number=KB0011692">University of Texas - Austin</a></b></h4>
+              <h4><b><a href="https://ut.service-now.com/utss/KAhome.do?number=KB0011692">University of Texas -
+                    Austin</a></b></h4>
             </div>
           </div>
 
           <div class="card">
             <img src="img/universities/Ucsc.png" alt="University of California - Santa Cruz">
             <div class="container">
-              <h4><b><a href="http://its.ucsc.edu/security/bandwidth.html">University of California - Santa Cruz</a></b></h4>
+              <h4><b><a href="http://its.ucsc.edu/security/bandwidth.html">University of California - Santa Cruz</a></b>
+              </h4>
             </div>
           </div>
 
@@ -279,7 +284,8 @@
           <div class="card">
             <img src="img/universities/Columbia.png" alt="Columbia University">
             <div class="container">
-              <h4><b><a href="https://policylibrary.columbia.edu/network-protection-policy">Columbia University</a></b></h4>
+              <h4><b><a href="https://policylibrary.columbia.edu/network-protection-policy">Columbia University</a></b>
+              </h4>
             </div>
           </div>
 
@@ -293,65 +299,138 @@
           <div class="card">
             <img src="img/universities/Purdue.png" alt="Purdue University ">
             <div class="container">
-              <h4><b><a href="https://www.housing.purdue.edu/ResidentialLife/yourcomputer.html">Purdue University </a></b></h4>
+              <h4><b><a href="https://www.housing.purdue.edu/ResidentialLife/yourcomputer.html">Purdue University
+                  </a></b></h4>
             </div>
           </div>
 
           <div class="card">
-              <img src="img/universities/UC_Berkeley.png" alt="University of California - Berkeley ">
-              <div class="container">
-                <h4><b><a href="https://studenttech.berkeley.edu/campus-network-policies">University of California - Berkeley </a></b></h4>
-              </div>
+            <img src="img/universities/UC_Berkeley.png" alt="University of California - Berkeley ">
+            <div class="container">
+              <h4><b><a href="https://studenttech.berkeley.edu/campus-network-policies">University of California -
+                    Berkeley </a></b></h4>
             </div>
+          </div>
 
           <div class="card">
-              <img src="img/universities/rutgers.png" alt="Rutgers University ">
-              <div class="container">
-                <h4><b><a href="https://ruwireless.rutgers.edu/ruwireless-policies?page=bandwidth">Rutgers University </a></b></h4>
-              </div>
+            <img src="img/universities/rutgers.png" alt="Rutgers University ">
+            <div class="container">
+              <h4><b><a href="https://ruwireless.rutgers.edu/ruwireless-policies?page=bandwidth">Rutgers University
+                  </a></b></h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/Rose_Hulman.png" alt="Rose-Hulman Institute of Technology ">
-              <div class="container">
-                <h4><b><a href="https://servicedesk.rose-hulman.edu/search/">Rose-Hulman Institute of Technology </a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/Rose_Hulman.png" alt="Rose-Hulman Institute of Technology ">
+            <div class="container">
+              <h4><b><a href="https://servicedesk.rose-hulman.edu/search/">Rose-Hulman Institute of Technology </a></b>
+              </h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/Missouri.png" alt="Missouri State University ">
-              <div class="container">
-                <h4><b><a href="http://resnet.missouristate.edu/#/bandWidth">Missouri State University </a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/Missouri.png" alt="Missouri State University ">
+            <div class="container">
+              <h4><b><a href="http://resnet.missouristate.edu/#/bandWidth">Missouri State University </a></b></h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/WPI.png" alt="Worcester Polytechnic Institute ">
-              <div class="container">
-                <h4><b><a href="https://www.wpi.edu/about/policies/network-security">Worcester Polytechnic Institute </a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/WPI.png" alt="Worcester Polytechnic Institute ">
+            <div class="container">
+              <h4><b><a href="https://www.wpi.edu/about/policies/network-security">Worcester Polytechnic Institute
+                  </a></b></h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/Liberty.png" alt="Liberty University">
-              <div class="container">
-                <h4><b><a href="http://www.liberty.edu/informationservices/development/index.cfm?PID=26076">Liberty University</a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/Liberty.png" alt="Liberty University">
+            <div class="container">
+              <h4><b><a href="http://www.liberty.edu/informationservices/development/index.cfm?PID=26076">Liberty
+                    University</a></b></h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/NIU.png" alt="Northern Illinois University">
-              <div class="container">
-                <h4><b><a href="https://doit.niu.edu/doit/policies/au.shtml">Northern Illinois University</a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/NIU.png" alt="Northern Illinois University">
+            <div class="container">
+              <h4><b><a href="https://doit.niu.edu/doit/policies/au.shtml">Northern Illinois University</a></b></h4>
             </div>
+          </div>
 
-            <div class="card">
-              <img src="img/universities/North_Carolina_Chapel_Hill.png" alt="University of North Carolina - Chapel Hill">
-              <div class="container">
-                <h4><b><a href="https://its.unc.edu/about-us/how-we-operate/">University of North Carolina - Chapel Hill</a></b></h4>
-              </div>
+          <div class="card">
+            <img src="img/universities/North_Carolina_Chapel_Hill.png" alt="University of North Carolina - Chapel Hill">
+            <div class="container">
+              <h4><b><a href="https://its.unc.edu/about-us/how-we-operate/">University of North Carolina - Chapel
+                    Hill</a></b></h4>
             </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/MIT.png" alt="Massachusetts Institute of Technology">
+            <div class="container">
+              <h4><b><a href="https://ist.mit.edu/about/it-policies">Massachusetts Institute of Technology</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/Washington.png" alt="University of Washington">
+            <div class="container">
+              <h4><b><a href="https://itconnect.uw.edu/connect/uw-networks/">University of Washington</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/Princeton.png" alt="Princeton University">
+            <div class="container">
+              <h4><b><a href="https://oit.princeton.edu/policies">Princeton University</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/California_Institute_of_Technology.png" alt="California Institute of Technology">
+            <div class="container">
+              <h4><b><a href="https://www.imss.caltech.edu/node/142">California Institute of Technology</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/Michigan.png" alt="University of Michigan--Ann Arbor">
+            <div class="container">
+              <h4><b><a href="https://its.umich.edu/enterprise/wifi-networks/network-security">University of Michigan -
+                    Ann Arbor</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/UCLA.png" alt="University of California-Los Angeles">
+            <div class="container">
+              <h4><b><a href="http://www.policies.ucla.edu/Home/InformationTechnology">University of California - Los
+                    Angeles</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/UW-Madison.png" alt="University of Wisconsin - Madison">
+            <div class="container">
+              <h4><b><a href="https://kb.wisc.edu/itpolicy/cio-policies">University of Wisconsin - Madison</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/Harvard.png" alt="Harvard University">
+            <div class="container">
+              <h4><b><a href="https://huit.harvard.edu/information-technology-policies">Harvard University</a></b></h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/universities/UC_San_Diego.png" alt="University of California - San Diego">
+            <div class="container">
+              <h4><b><a href="https://blink.ucsd.edu/technology/security/services/network.html">University of California
+                    - San Diego</a></b></h4>
+            </div>
+          </div>
 
           <div class="card">
             <div class="container">
@@ -364,23 +443,18 @@
 
         <h3 id="contradiction">Contradiction detection</h3>
         <p>
+          This dataset contains natural language sentences annotated with contradictions and entailments. We used a
+          standard campus network topology and known services, groups, and traffic to create random pairs of Nile
+          intents "hand-annotated" as contradictions or not.
+
           The following numbers represent the number of policies on the dataset:
         </p>
         <ul>
           <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_100.json">100</a>
           </li>
-          <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_250.json">250</a>
-          </li>
-          <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_500.json">500</a>
-          </li>
           <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_1000.json">1000</a>
           </li>
-          <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_2500.json">2500</a>
-          </li>
           <li><a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_5000.json">5000</a>
-          </li>
-          <li><a
-              href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/contradictions_10000.json">10000</a>
           </li>
         </ul>
 
