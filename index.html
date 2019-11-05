@@ -196,13 +196,18 @@
       <div id="datasets">
         <h2>Datasets</h2>
         <h3>Alpha</h3>
-        <p>Manufactured hand-annotated dataset with 70 examples of network intents. Available at <a
+        <p align="justify">Manufactured hand-annotated dataset with 70 examples of network intents as if an operator were giving
+          commands to Lumi. <br>Available at <a
             href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/extraction_alpha.json">Github</a></p>
 
         <h3>Campi</h3>
-        <p>
-          Public policies of 50 campus networks of US universities. Available at <a
-            href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/extraction_campi.json">Github</a>
+        <p align="justify">
+          Public policies of 50 campus networks of US universities. To build the campi dataset, we crawled through the
+          websites of the universities and manually parsed the policy documents to extract one-phrase intents. From
+          those 50 university policies, we extracted 50 network intents. Overall, most universities have network
+          policies related to usage quotas, rate limiting and ACL, all of which we can express in <em>Nile</em>. <br>Available
+          at <a href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/extraction_campi.json">Github</a>.<br>
+          Accessed on <em>September 9th, 2019</em>.
         </p>
         <div class="cardbox">
           <div class="card">
@@ -576,7 +581,7 @@
 
 
         <h3 id="contradiction">Contradiction detection</h3>
-        <p>
+        <p align="justify">
           This dataset contains natural language sentences annotated with contradictions and entailments. We used a
           standard campus network topology and known services, groups, and traffic to create random pairs of Nile
           intents "hand-annotated" as contradictions or not.
