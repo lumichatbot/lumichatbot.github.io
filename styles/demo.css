@@ -1,16 +1,30 @@
 /********************************************
  ******************* HOME *******************
  ********************************************/
-
-.home .md-app {
-  max-height: 400px;
+.demo .md-app {
+  max-height: 100%;
   border: 1px solid rgba(#000, .12);
 }
 
-.home .md-app-toolbar {
+.demo .md-app-toolbar {
   height: 196px;
+  background-color: #343f3e !important;
 }
 
-.home .md-tabs {
-  /* width: 60%; */
+.demo .logo {
+  height: 6em;
+  width: 6em;
+}
+
+.demo .md-app-content {
+  min-height: 500px;
+  margin-left: 180px !important;
+  margin-right: 180px !important;
+}
+
+.demo .md-card .chatbot {
+  width: auto;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: top;
 }
