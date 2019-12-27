@@ -1,0 +1,32 @@
+/********************************************
+ ******************* DEMO *******************
+ ********************************************/
+.evaluation .md-app {
+  max-height: 100%;
+  border: 1px solid rgba(#000, .12);
+}
+
+.evaluation .md-app-toolbar {
+  height: 196px;
+  background-color: #343f3e !important;
+}
+
+.evaluation .logo {
+  height: auto;
+  width: 6em;
+  margin: 0;
+  padding: 0;
+}
+
+.evaluation .md-app-content {
+  height: auto;
+}
+
+.evaluation .md-app-scroller {
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.evaluation .md-card .chatbot {
+  margin: 0;
+}

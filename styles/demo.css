@@ -1,5 +1,5 @@
 /********************************************
- ******************* HOME *******************
+ ******************* DEMO *******************
  ********************************************/
 .demo .md-app {
   max-height: 100%;
@@ -12,19 +12,21 @@
 }
 
 .demo .logo {
-  height: 6em;
+  height: auto;
   width: 6em;
+  margin: 0;
+  padding: 0;
 }
 
 .demo .md-app-content {
-  min-height: 500px;
-  margin-left: 180px !important;
-  margin-right: 180px !important;
+  height: auto;
+}
+
+.demo .md-app-scroller {
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
 .demo .md-card .chatbot {
-  width: auto;
-  margin: 4px;
-  display: inline-block;
-  vertical-align: top;
+  margin: 0;
 }

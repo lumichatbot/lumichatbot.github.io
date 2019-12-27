@@ -24,12 +24,17 @@
   <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap">
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
+
   <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">
   <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">
 
+  <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/demo.css">
+  <link rel="stylesheet" href="./styles/evaluation.css">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149370726-1"></script>
   <script>
@@ -63,6 +68,7 @@
   <!-- Vue Pages and Components here -->
   <script src='./scripts/home.vue.js'></script>
   <script src='./scripts/demo.vue.js'></script>
+  <script src='./scripts/evaluation.vue.js'></script>
   <!-- <script src='./scripts/components/toolbar.vue.js'></script> -->
   <!-- <script src='./scripts/components/card.vue.js'></script> -->
 
@@ -77,17 +83,28 @@
       {
         path: '/demo',
         component: demo
+      },
+      {
+        path: '/evaluation',
+        component: evaluation
       }
     ]
 
     let router = new VueRouter({
-      //mode: 'history',
-      routes // short for `routes: routes`
+      // mode: 'history',
+      routes
+      // scrollBehavior: function(to) {
+      //   if (to.hash) {
+      //     return {
+      //       selector: to.hash
+      //     }
+      //   }
+      // }
     })
 
-    router.beforeEach((to, from, next) => {
-      next()
-    })
+    // router.beforeEach((to, from, next) => {
+    //   next()
+    // })
 
     var app = new Vue({
       el: '#app',
