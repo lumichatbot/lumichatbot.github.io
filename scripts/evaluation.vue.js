@@ -171,7 +171,7 @@ var evaluation = Vue.component("Evaluation", {
       third: false,
       fourth: false,
       fifth: false,
-      finished: true,
+      finished: false,
       confirmStepOne: false,
       confirmStepTwo: false,
       confirmStepThree: false,
