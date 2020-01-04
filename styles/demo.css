@@ -22,11 +22,14 @@
   height: auto;
 }
 
-.demo .md-app-scroller {
-  margin-left: 180px;
-  margin-right: 180px;
+.demo .md-card .chatbot {
+  margin: 0 auto;
+  max-width: 350px;
 }
 
-.demo .md-card .chatbot {
-  margin: 0;
+@media screen and (min-width: 1366px) {
+  .demo .md-app-scroller {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
 }
