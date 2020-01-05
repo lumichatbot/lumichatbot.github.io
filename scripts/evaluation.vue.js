@@ -51,7 +51,7 @@ var evaluation = Vue.component("Evaluation", {
               </div>
               <div class="md-layout-item md-size-40 md-small-size-100">
                 <md-card class="chatbot">
-                  <iframe class="md-image" allow="microphone;" width="350" height="530" src="../../lib/client/index.html"></iframe>
+                  <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                 </md-card>
               </div>
             </div>
@@ -106,6 +106,7 @@ var evaluation = Vue.component("Evaluation", {
             activeStep: 'first',
             prequestionnaireUrl: '',
             postquestionnaireUrl: '',
+            demoUrl: '',
             first: false,
             second: false,
             third: false,
@@ -116,13 +117,16 @@ var evaluation = Vue.component("Evaluation", {
         }
     },
     created() {
-        const uuid = this.uuid64();
-        console.log('generated uuid', uuid);
+        const uuid = this.uuid4();
+
         this.prequestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${uuid}&embedded=true`;
+
         this.postquestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${uuid}&embedded=true`;
+
+        this.demoUrl = `../../lib/client/index.html?uuid=${uuid}`
     },
     methods: {
-        uuid64: function () {
+        uuid4: function () {
             var dt = new Date().getTime();
             var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
                 var r = (dt + Math.random() * 16) % 16 | 0;
