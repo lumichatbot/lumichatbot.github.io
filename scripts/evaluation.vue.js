@@ -16,6 +16,7 @@ var evaluation = Vue.component("Evaluation", {
       </md-app-toolbar>
 
       <md-app-content>
+        <small class="md-layout md-alignment-center-right">Session UUID: {{ uuid }}</small>
         <md-steppers v-if="!finished" md-alternative md-linear md-dynamic-height :md-active-step.sync="activeStep">
           <md-step id="first" md-label="Pre-questionnaire" :md-done.sync="first" :md-editable="false">
             <div class="md-layout md-alignment-top-center">
@@ -107,6 +108,7 @@ var evaluation = Vue.component("Evaluation", {
             prequestionnaireUrl: '',
             postquestionnaireUrl: '',
             demoUrl: '',
+            uuid: '',
             first: false,
             second: false,
             third: false,
@@ -117,13 +119,13 @@ var evaluation = Vue.component("Evaluation", {
         }
     },
     created() {
-        const uuid = this.uuid4();
+        this.uuid = this.uuid4();
 
-        this.prequestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${uuid}&embedded=true`;
+        this.prequestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${this.uuid}&embedded=true`;
 
-        this.postquestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${uuid}&embedded=true`;
+        this.postquestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${this.uuid}&embedded=true`;
 
-        this.demoUrl = `../../lib/client/index.html?uuid=${uuid}`
+        this.demoUrl = `../../lib/client/index.html?uuid=${this.uuid}`
     },
     methods: {
         uuid4: function () {
