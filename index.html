@@ -2,115 +2,111 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title>Lumi Chatbot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Lumi Chatbot</title>
 
-  <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap">
-  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
 
-  <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">
 
-  <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/home.css">
-  <link rel="stylesheet" href="./styles/demo.css">
-  <link rel="stylesheet" href="./styles/evaluation.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/demo.css">
+    <link rel="stylesheet" href="./styles/evaluation.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149370726-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149370726-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-149370726-1');
-  </script>
+        gtag('config', 'UA-149370726-1');
+    </script>
 </head>
 
 <body>
-  <div class="body-content">
-    <div id="app" v-cloak>
-      <v-app>
-        <router-view></router-view>
-      </v-app>
+    <div class="body-content">
+        <div id="app" v-cloak>
+            <v-app>
+                <router-view></router-view>
+            </v-app>
+        </div>
     </div>
-  </div>
 
-  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/vue-material"></script>
-  <script src="https://unpkg.com/http-vue-loader"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-material"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
-  <!-- Vue Pages and Components here -->
-  <script src='./scripts/home.vue.js'></script>
-  <script src='./scripts/demo.vue.js'></script>
-  <script src='./scripts/evaluation.vue.js'></script>
-  <!-- <script src='./scripts/components/toolbar.vue.js'></script> -->
-  <!-- <script src='./scripts/components/card.vue.js'></script> -->
+    <!-- Vue Pages and Components here -->
+    <script src='./scripts/home.vue.js'></script>
+    <script src='./scripts/demo.vue.js'></script>
+    <script src='./scripts/evaluation.vue.js'></script>
+    <!-- <script src='./scripts/components/toolbar.vue.js'></script> -->
+    <!-- <script src='./scripts/components/card.vue.js'></script> -->
 
-  <script>
-    Vue.use(VueRouter);
-    Vue.use(VueMaterial.default)
+    <script>
+        Vue.use(VueRouter);
+        Vue.use(VueMaterial.default)
 
-    const routes = [{
-        path: '/',
-        component: home
-      },
-      {
-        path: '/demo',
-        component: demo
-      },
-      {
-        path: '/evaluation',
-        component: evaluation
-      }
-    ]
+        const routes = [{
+                path: '/',
+                component: home
+            },
+            {
+                path: '/demo',
+                component: demo
+            },
+            {
+                path: '/evaluation',
+                component: evaluation
+            }
+        ]
 
-    let router = new VueRouter({
-      // mode: 'history',
-      routes
-      // scrollBehavior: function(to) {
-      //   if (to.hash) {
-      //     return {
-      //       selector: to.hash
-      //     }
-      //   }
-      // }
-    })
+        let router = new VueRouter({
+            // mode: 'history',
+            routes
+        })
 
-    // router.beforeEach((to, from, next) => {
-    //   next()
-    // })
+        // keep alive for heroku app
+        setInterval(function() {
+            fetch("https://lumi-webhook.herokuapp.com").then(res => {
+                console.log("Succesfully fetched Heroku app", res)
+            }).catch(err => console.log('Error fetching Heroku app', err))
+        }, 300000)
 
-    var app = new Vue({
-      el: '#app',
-      router
-    })
-  </script>
+        var app = new Vue({
+            el: '#app',
+            router
+        })
+    </script>
 </body>
 
 </html>
