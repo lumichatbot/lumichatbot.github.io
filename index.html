@@ -95,13 +95,6 @@
             routes
         })
 
-        // keep alive for heroku app
-        setInterval(function() {
-            fetch("https://lumi-webhook.herokuapp.com").then(res => {
-                console.log("Succesfully fetched Heroku app", res)
-            }).catch(err => console.log('Error fetching Heroku app', err))
-        }, 300000)
-
         var app = new Vue({
             el: '#app',
             router
