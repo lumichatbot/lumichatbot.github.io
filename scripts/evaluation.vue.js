@@ -40,15 +40,15 @@ var evaluation = Vue.component("Evaluation", {
           </md-step>
 
           <md-step id="second" md-label="Experiment" :md-done.sync="second" :md-editable="false">
+            <h2>Experiment</h2>
+            <p><b>Congratulations!</b> You've just been hired as a network operator at the prestigious Fictitious University. Here's your first task:</p>
+
             <div class="md-layout md-gutter md-alignment-center-space-between">
               <div class="md-layout-item md-size-60 md-small-size-100">
-                <h2>Experiment 1</h2>
-                <blockquote>
-                  <p>"Hey Lumi, please block traffic for all students."</p>
-                  <p>"Please make traffic coming from the Internet pass through a firewall."</p>
-                  <p>"Limit bandwidth usage to 50 mbps for professors."</p>
-                  <p>"Students can download up to 10 GB per week of data."</p>
-                </blockquote>
+                <h3>Task 1</h3>
+                <p>Consider the network infrastructure depicted below.</p>
+                <img src="assets/img/demo/infrastructure-1.svg" width="65%">
+                <p>Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the IDS middlebox.</p>
               </div>
               <div class="md-layout-item md-size-40 md-small-size-100">
                 <md-card class="chatbot">
@@ -119,13 +119,16 @@ var evaluation = Vue.component("Evaluation", {
         }
     },
     created() {
-        this.uuid = this.uuid4();
+        if (localStorage.getItem('session') !== null) {
+            this.uuid = localStorage.getItem('session')
+        } else {
+            this.uuid = this.uuid4();
+            localStorage.setItem('session', this.uuid)
+        }
 
         this.prequestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${this.uuid}&embedded=true`;
-
         this.postquestionnaireUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${this.uuid}&embedded=true`;
-
-        this.demoUrl = `../../lib/client/index.html?uuid=${this.uuid}`
+        this.demoUrl = `../../lib/client/index.html?uuid=${this.uuid}&live=true`
     },
     methods: {
         uuid4: function () {

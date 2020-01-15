@@ -18,15 +18,15 @@ var demo = Vue.component("Demo", {
       <md-app-content>
         <div class="md-layout">
           <h2>Welcome to Lumi's demo experiment!</h2>
-          <p>Thank you very much for helpng us improve our research. The purpose of this experiment is to evaluate the chatbot we built to help network operators manage their networks, allowing them to express their general intents for the network using natural language. We intend to release a summary of the aggregate results to the research community and use them as part of a scientific article.</p>
+          <p>Thank you very much for helpng us improve our research. The purpose of this experiment is to evaluate the <b>usability</b> of <b>Lumi</b>, the chatbot we built to help network operators manage their networks, allowing them to express their general intents for the network using natural language. We intend to release a summary of the aggregate results to the research community and use them as part of a scientific article.</p>
         </div>
         <div class="md-layout md-gutter md-alignment-center-space-between">
           <div class="md-layout-item md-size-60 md-small-size-100">
             <h2>Outline</h2>
-            <p>The evaluation takes no more than <b>10 minutes</b>, and is composed of 3 steps:</p>
+            <p>The evaluation takes no more than <b>20 minutes</b>, and is composed of 3 steps:</p>
             <ul>
               <li><b>Pre-questionnaire</b>: some questions to help us sort the collected data.</li>
-              <li><b>3 Experiments</b>: you will be asked to complete 3 quick tasks in controlled environements using Lumi.</li>
+              <li><b>Experiment</b>: you will be asked to complete some quick network mangement tasks using Lumi.</li>
               <li><b>Post-questionnaire</b>: let us know your thoughts on the experiment and your experience using Lumi.</li>
             </ul>
             <p>Before we start, feel free to play around with Lumi <b>on the right</b>. Intents declared here will take no effect in the experiment. Some example intents below:</p>
