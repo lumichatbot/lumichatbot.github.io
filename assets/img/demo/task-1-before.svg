@@ -12,6 +12,8 @@
 	.st6{font-family:'Roboto-Regular';}
 	.st7{font-size:9px;}
 	.st8{font-family:'Roboto-Bold';}
+	.st9{fill:none;stroke:#94B0DA;stroke-width:3;stroke-miterlimit:11.3386;stroke-dasharray:3,3;}
+	.st10{fill:#94B0DA;}
 </style>
 <symbol  id="cloud" viewBox="-43 -22.4 86.1 44.9">
 	<g id="layer1_1_" transform="translate(-54.754156,-85.921738)">
@@ -148,4 +150,13 @@
 <text transform="matrix(6.123234e-17 -1 1 6.123234e-17 60.8597 175.2754)" class="st4 st6 st7">Servers</text>
 <text transform="matrix(6.123234e-17 -1 1 6.123234e-17 103.385 174.3223)" class="st4 st6 st7">Guests</text>
 <text transform="matrix(6.123234e-17 -1 1 6.123234e-17 155.6422 173.5859)" class="st4 st6 st7">Dorms</text>
+<line class="st5" x1="36.1" y1="28.9" x2="36.1" y2="74.9"/>
+<g>
+	<g>
+		<path class="st9" d="M82.5,43.3c-0.6,11.9-3.3,27.5-14,38.2c-12,12-24.9,8.6-37.4,19.8c-6.7,6-13.9,16.8-16.3,37.7"/>
+		<g>
+			<polygon class="st10" points="10.5,137.4 14.2,145.5 19.5,138.2 			"/>
+		</g>
+	</g>
+</g>
 </svg>

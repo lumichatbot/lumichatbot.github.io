@@ -2,34 +2,38 @@
  ******************* DEMO *******************
  ********************************************/
 .evaluation .md-app {
-  max-height: 100%;
-  border: 1px solid rgba(#000, .12);
+    max-height: 100%;
+    border: 1px solid rgba(#000, .12);
 }
 
 .evaluation .md-app-toolbar {
-  height: 196px;
-  background-color: #343f3e !important;
+    height: 196px;
+    background-color: #343f3e !important;
 }
 
 .evaluation .logo {
-  height: auto;
-  width: 6em;
-  margin: 0;
-  padding: 0;
+    height: auto;
+    width: 6em;
+    margin: 0;
+    padding: 0;
 }
 
 .evaluation .md-app-content {
-  height: auto;
+    height: auto;
 }
 
 .evaluation .md-card .chatbot {
-  margin: 0 auto;
-  max-width: 350px;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.evaluation .md-image .task-image {
+    margin: 0 auto
 }
 
 @media screen and (min-width: 1366px) {
-  .evaluation .md-app-scroller {
-    margin-left: 180px;
-    margin-right: 180px;
-  }
+    .evaluation .md-app-scroller {
+        margin-left: 180px;
+        margin-right: 180px;
+    }
 }
