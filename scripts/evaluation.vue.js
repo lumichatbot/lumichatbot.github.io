@@ -36,7 +36,7 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 1: middlebox chaining</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs (<b>blue arrow</b>). Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox, as depicted below.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox, as depicted below.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100">
