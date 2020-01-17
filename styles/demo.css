@@ -2,34 +2,34 @@
  ******************* DEMO *******************
  ********************************************/
 .demo .md-app {
-  max-height: 100%;
-  border: 1px solid rgba(#000, .12);
+    max-height: 100%;
+    border: 1px solid rgba(#000, .12);
 }
 
 .demo .md-app-toolbar {
-  height: 196px;
-  background-color: #343f3e !important;
+    height: 196px;
+    background-color: #343f3e !important;
 }
 
 .demo .logo {
-  height: auto;
-  width: 6em;
-  margin: 0;
-  padding: 0;
+    height: auto;
+    width: 6em;
+    margin: 0;
+    padding: 0;
 }
 
 .demo .md-app-content {
-  height: auto;
+    height: auto;
 }
 
 .demo .md-card .chatbot {
-  margin: 0 auto;
-  max-width: 350px;
+    margin: 0 auto;
+    max-width: 350px;
 }
 
 @media screen and (min-width: 1366px) {
-  .demo .md-app-scroller {
-    margin-left: 180px;
-    margin-right: 180px;
-  }
+    .demo .md-app-scroller {
+        margin-left: 160px;
+        margin-right: 160px;
+    }
 }

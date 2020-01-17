@@ -2,72 +2,72 @@
  ******************* HOME *******************
  ********************************************/
 .menu {
-  width: 100%;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+    width: 100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #refinement-image {
-  margin: 0 auto;
-  text-align: center
+    margin: 0 auto;
+    text-align: center
 }
 
 #refinement-image img {
-  margin-left: -10px;
-  padding: 0;
+    margin-left: -10px;
+    padding: 0;
 }
 
 #menu-center {
-  margin: 0 auto;
-  text-align: center
+    margin: 0 auto;
+    text-align: center
 }
 
 #menu-center ul {
-  margin: 5px 0 0 0;
+    margin: 5px 0 0 0;
 }
 
 #menu-center ul li {
-  list-style: none;
-  margin: 0 0 0 0;
-  display: inline;
+    list-style: none;
+    margin: 0 0 0 0;
+    display: inline;
 }
 
 #menu-center ul li a {
-  padding: 25px;
+    padding: 25px;
 }
 
 #menu-center ul li a:hover {
-  /* background-color: #ccc; */
-  color: #ffffff;
-  border-radius: 5px;
-  text-decoration: none
+    /* background-color: #ccc; */
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none
 }
 
 #menu-center ul li a:link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #process {
-  text-align: justify;
+    text-align: justify;
 }
 
 .menu #menu-center a {
-  color: #cccccc;
+    color: #cccccc;
 }
 
 .active {
-  color: #fff !important;
-  font-weight: bolder;
-  border-radius: 5px;
-  font-size: 18px;
+    color: #fff !important;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 .refinement {
-  display: none;
+    display: none;
 }
 
 #img-lumi {
-  text-align: center;
+    text-align: center;
 }
