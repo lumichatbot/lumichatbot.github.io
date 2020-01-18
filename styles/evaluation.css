@@ -27,13 +27,18 @@
     max-width: 350px;
 }
 
-.evaluation .md-image .task-image {
-    margin: 0 auto
+.evaluation .md-image.task-image {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.evaluation .md-layout-item.md-size-50.md-small-size-100.task-image-container {
+    padding-right: 0;
 }
 
 @media screen and (min-width: 1366px) {
     .evaluation .md-app-scroller {
-        margin-left: 160px;
-        margin-right: 160px;
+        margin-left: 130px;
+        margin-right: 130px;
     }
 }

@@ -30,7 +30,7 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
 
                     <md-step id="second" md-label="Task 1" :md-done.sync="second" :md-editable="false">
-                        <div class="md-layout md-gutter md-alignment-center-space-between">
+                        <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-100">
                                 <p><b>Congratulations!</b> You've just been hired as a network operator at the prestigious Fictitious University. Here's your first task!</p>
                             </div>
@@ -39,13 +39,13 @@ var evaluation = Vue.component("Evaluation", {
                                 <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox, as depicted below.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Current</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-before.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-1-before.png">
                                     </div>
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Goal</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-after.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-1-after.png">
                                     </div>
                                 </div>
                             </div>
@@ -62,19 +62,19 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
 
                     <md-step id="third" md-label="Task 2" :md-done.sync="third" :md-editable="false">
-                        <div class="md-layout md-gutter md-alignment-center-space-between">
+                        <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 2: rate limiting</h2>
                                 <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to <b>limit to 100 Mbps</b> the bandwidth torrent traffic can consume.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Current</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-2-before.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-2-before.png">
                                     </div>
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Goal</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-2-after.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-2-after.png">
                                     </div>
                                 </div>
                             </div>
@@ -91,19 +91,19 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
 
                     <md-step id="fourth" md-label="Task 3" :md-done.sync="fourth" :md-editable="false">
-                        <div class="md-layout md-gutter md-alignment-center-space-between">
+                        <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 3: usage quotas</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Some students in the dorms have been bing-watching the new season of Game of Thrones. However, apperently, all of them have 4K TVs, which is causing them to download an excessive amount of data. Please use <b>Lumi's</b> chatbot interface on the right to <b>set a 10 GB per week download quota</b> for students in dorms.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Current</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-before.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-3-before.png">
                                     </div>
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Goal</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-after.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-3-after.png">
                                     </div>
                                 </div>
                             </div>
@@ -120,19 +120,19 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
 
                     <md-step id="fifth" md-label="Task 4" :md-done.sync="fifth" :md-editable="false">
-                        <div class="md-layout md-gutter md-alignment-center-space-between">
+                        <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 4: firewall rules </h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. After careful inspection of the traffic from the research labs, you have noticed that the suspicius traffic from Task 1 originated from students accessing a pirate streaming website F2movies. Please use <b>Lumi's</b> chatbot interface on the right to <b>block F2movies traffic</b> for students in the labs.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Current</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-before.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-4-before.png">
                                     </div>
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Goal</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-after.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-4-after.png">
                                     </div>
                                 </div>
                             </div>
@@ -149,19 +149,19 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
 
                     <md-step id="sixth" md-label="Task 5" :md-done.sync="sixth" :md-editable="false">
-                        <div class="md-layout md-gutter md-alignment-center-space-between">
+                        <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 5: temporal throttling</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Lately you have received many complaints on traffic congestion during peak hours. Upon further analysis, you realize that some services hosted in the servers have been receiving too many access from 4PM to 7PM everyday. Please use <b>Lumi's</b> chatbot interface on the right <b> to set a 5 Gbps bandwidth limit</b> for the server racks <b> from 4PM to 7PM</b>.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Current</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-before.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-5-before.png">
                                     </div>
-                                    <div class="md-layout-item md-size-50 md-small-size-100">
+                                    <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
                                         <h2>Goal</h2>
-                                        <img class="md-image task-image" src="assets/img/demo/task-1-after.svg">
+                                        <img class="md-image task-image" src="assets/img/demo/task-5-after.png">
                                     </div>
                                 </div>
                             </div>
