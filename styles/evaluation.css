@@ -32,6 +32,10 @@
     max-width: 100%;
 }
 
+.evaluation .stepper-buttons {
+    margin-top: 20px;
+}
+
 .evaluation .md-layout-item.md-size-50.md-small-size-100.task-image-container {
     padding-right: 0;
 }

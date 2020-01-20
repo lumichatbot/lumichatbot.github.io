@@ -16,9 +16,13 @@ var evaluation = Vue.component("Evaluation", {
             </md-app-toolbar>
 
             <md-app-content>
-                <small class="md-layout md-alignment-center-right">Session UUID: {{ uuid }}</small>
+                <small v-if="!finished" class="md-layout md-alignment-center-space-between">
+                    <span>Questions or problems? Contact us at <b>lumi.chatbot@gmail.com</b></span>
+                    <span>Session UUID: {{ uuid }}</span>
+                </small>
+                <br>
                 <md-steppers v-if="!finished" md-alternative md-linear md-dynamic-height :md-active-step.sync="activeStep">
-                    <md-step id="first" md-label="Pre-questionnaire" :md-done.sync="first" :md-editable="false">
+                    <md-step id="one" md-label="Pre-questionnaire" :md-done.sync="steps.one" :md-editable="false">
                         <div class="md-layout md-alignment-top-center">
                             <iframe class="md-image" :src="preQuestUrl" width="640" height="620" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
@@ -26,13 +30,12 @@ var evaluation = Vue.component("Evaluation", {
                             <md-button class="md-raised md-primary" @click="confirmPreQuest = true">Next</md-button>
                         </div>
 
-                        <md-dialog-confirm :md-active.sync="confirmPreQuest" md-title="Are you sure?" md-content="You cannot come back to this step once you have completed it. <br> Please make sure you clicked <b>'Submit'</b> on the embedded Google Form." md-confirm-text="Next" md-cancel-text="Cancel" @md-cancel="confirmPreQuest = false" @md-confirm="next('first', 'second')" />
+                        <md-dialog-confirm :md-active.sync="confirmPreQuest" md-title="Are you sure?" md-content="You cannot come back to this step once you have completed it. <br> Please make sure you clicked <b>'Submit'</b> on the embedded Google Form." md-confirm-text="Next" md-cancel-text="Cancel" @md-cancel="confirmPreQuest = false" @md-confirm="next()"/>
                     </md-step>
-
-                    <md-step id="second" md-label="Task 1" :md-done.sync="second" :md-editable="false">
+                    <md-step id="two" md-label="Task 1" :md-done.sync="steps.two" :md-editable="false">
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-100">
-                                <p><b>Congratulations!</b> You've just been hired as a network operator at the prestigious Fictitious University. Here's your first task!</p>
+                                <p><b>Congratulations!</b> You've just been hired as a network operator at the prestigious Fictitious University. Here's your one task!</p>
                             </div>
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 1: middlebox chaining</h2>
@@ -56,12 +59,13 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                         </div>
 
-                        <div class="md-layout md-alignment-center-right">
-                            <md-button class="md-raised md-primary" @click="next('second', 'third')">Next</md-button>
+                        <div class="stepper-buttons md-layout md-alignment-center-space-between">
+                            <p>Click on <b>Check answer</b> to see if you have completed the task.</p>
+                            <md-button class="md-raised md-primary" @click="checkTask(1)">Check answer</md-button>
                         </div>
                     </md-step>
 
-                    <md-step id="third" md-label="Task 2" :md-done.sync="third" :md-editable="false">
+                    <md-step id="three" md-label="Task 2" :md-done.sync="steps.three" :md-editable="false">
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 2: rate limiting</h2>
@@ -85,12 +89,13 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                         </div>
 
-                        <div class="md-layout md-alignment-center-right">
-                            <md-button class="md-raised md-primary" @click="next('third', 'fourth')">Next</md-button>
+                        <div class="stepper-buttons md-layout md-alignment-center-space-between">
+                            <p>Click on <b>Check answer</b> to see if you have completed the task.</p>
+                            <md-button class="md-raised md-primary" @click="checkTask(2)">Check answer</md-button>
                         </div>
                     </md-step>
 
-                    <md-step id="fourth" md-label="Task 3" :md-done.sync="fourth" :md-editable="false">
+                    <md-step id="four" md-label="Task 3" :md-done.sync="steps.four" :md-editable="false">
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 3: usage quotas</h2>
@@ -114,12 +119,13 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                         </div>
 
-                        <div class="md-layout md-alignment-center-right">
-                            <md-button class="md-raised md-primary" @click="next('fourth', 'fifth')">Next</md-button>
+                        <div class="stepper-buttons md-layout md-alignment-center-space-between">
+                            <p>Click on <b>Check answer</b> to see if you have completed the task.</p>
+                            <md-button class="md-raised md-primary" @click="checkTask(3)">Check answer</md-button>
                         </div>
                     </md-step>
 
-                    <md-step id="fifth" md-label="Task 4" :md-done.sync="fifth" :md-editable="false">
+                    <md-step id="five" md-label="Task 4" :md-done.sync="steps.five" :md-editable="false">
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 4: firewall rules </h2>
@@ -143,16 +149,17 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                         </div>
 
-                        <div class="md-layout md-alignment-center-right">
-                            <md-button class="md-raised md-primary" @click="next('fifth', 'sixth')">Next</md-button>
+                        <div class="stepper-buttons md-layout md-alignment-center-space-between">
+                            <p>Click on <b>Check answer</b> to see if you have completed the task.</p>
+                            <md-button class="md-raised md-primary" @click="checkTask(4)">Check answer</md-button>
                         </div>
                     </md-step>
 
-                    <md-step id="sixth" md-label="Task 5" :md-done.sync="sixth" :md-editable="false">
+                    <md-step id="six" md-label="Task 5" :md-done.sync="steps.six" :md-editable="false">
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 5: temporal throttling</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Lately you have received many complaints on traffic congestion during peak hours. Upon further analysis, you realize that some services hosted in the servers have been receiving too many access from 4PM to 7PM everyday. Please use <b>Lumi's</b> chatbot interface on the right <b> to set a 5 Gbps bandwidth limit</b> for the server racks <b> from 4PM to 7PM</b>.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Lately you have received many complaints on traffic congestion during peak hours. Upon further analysis, you realize that some services hosted in the servers have been receiving too many access from 4PM to 7PM everyday. Please use <b>Lumi's</b> chatbot interface on the right to <b>set a 5 Gbps bandwidth limit</b> for the server racks <b>from 4PM to 7PM</b>.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -172,12 +179,13 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                         </div>
 
-                        <div class="md-layout md-alignment-center-right">
-                            <md-button class="md-raised md-primary" @click="next('sixth', 'seventh')">Next</md-button>
+                        <div class="stepper-buttons md-layout md-alignment-center-space-between">
+                            <p>Click on <b>Check answer</b> to see if you have completed the task.</p>
+                            <md-button class="md-raised md-primary" @click="checkTask(5)">Check answer</md-button>
                         </div>
                     </md-step>
 
-                    <md-step id="seventh" md-label="Post-questionnaire" :md-done.sync="seventh" :md-editable="false">
+                    <md-step id="seven" md-label="Post-questionnaire" :md-done.sync="steps.seven" :md-editable="false">
                         <div class="md-layout md-alignment-top-center">
                             <iframe class="md-image" :src="postQuestUrl" width="640" height="427" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
@@ -189,29 +197,64 @@ var evaluation = Vue.component("Evaluation", {
                     </md-step>
                 </md-steppers>
                 <div v-else class="md-layout md-alignment-center-center">
-                    <md-empty-state class="md-primary" md-icon="done" md-label="You're done!" md-description="Thank you for your cooperation.">
+                    <md-empty-state class="md-primary" md-icon="emoji_events" md-label="You're done!" md-description="Thank you for your cooperation.">
                         <md-button to="./" class="md-primary md-raised">Go back to home</md-button>
                     </md-empty-state>
                 </div>
+
+                <md-dialog :md-active.sync="checkTaskDialog" :md-close-on-esc="false" :md-click-outside-to-close="false">
+                    <template v-if="checking">
+                        <md-dialog-title>Checking task...</md-dialog-title>
+                        <md-dialog-content class="md-layout md-alignment-center-center">
+                            <md-progress-spinner md-mode="indeterminate"></md-progress-spinner>
+                        </md-dialog-content>
+                    </template>
+                    <template v-else>
+                        <template v-if="taskDone">
+                            <md-dialog-content>
+                                <md-empty-state class="md-primary" md-icon="emoji_emotions" md-label="Task completed!" md-description="Please click Next to continue."/>
+                            </md-dialog-content>
+                            <md-dialog-actions>
+                                <md-button class="md-primary" @click="next()">Next</md-button>
+                            </md-dialog-actions>
+                        </template>
+                        <template v-else>
+                            <md-dialog-content>
+                                <md-empty-state class="md-accent" md-icon="sentiment_very_dissatisfied" md-label="Task incomplete" md-description="Apperently you haven't completed the task at hand. Please go back ang give it another try! Try rephrashing your intent!"/>
+                            </md-dialog-content>
+
+                            <md-dialog-actions>
+                                <md-button @click="checkTaskDialog = false">Go back</md-button>
+                                <md-button class="md-accent" @click="next()">Skip</md-button>
+                            </md-dialog-actions>
+                        </template>
+                    </template>
+                </md-dialog>
             </md-app-content>
         </md-app>
     </div>
     `,
     data() {
         return {
-            activeStep: 'first',
             preQuestUrl: '',
             postQuestUrl: '',
             demoUrl: '',
             uuid: '',
-            first: false,
-            second: false,
-            third: false,
-            fourth: false,
-            fifth: false,
-            sixth: false,
-            seventh: false,
+            activeStep: 'one',
+            activeStepIdx: 0,
+            steps: {
+                one: false,
+                two: false,
+                three: false,
+                four: false,
+                five: false,
+                six: false,
+                seven: false
+            },
             finished: false,
+            checking: false,
+            taskDone: false,
+            checkTaskDialog: false,
             confirmPreQuest: false,
             confirmPostQuest: false
         }
@@ -225,9 +268,7 @@ var evaluation = Vue.component("Evaluation", {
         }
 
         this.preQuestUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${this.uuid}&embedded=true`;
-
         this.postQuestUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${this.uuid}&embedded=true`;
-
         this.demoUrl = `../../lib/client/index.html?uuid=${this.uuid}&live=true`
     },
     methods: {
@@ -240,16 +281,41 @@ var evaluation = Vue.component("Evaluation", {
             });
             return uuid;
         },
-        next: function (id, index) {
-            this[id] = true;
-
-            if (index) {
-                this.activeStep = index;
-            }
+        checkTask: function (task) {
+            this.checkTaskDialog = true;
+            this.checking = true
+            this.taskDone = false;
+            const url = get_webhook_url()
+            axios
+                .get(`${url}/check/${this.uuid}/${task}`)
+                .then(result => {
+                    console.log("result", result.data);
+                    this.taskDone = result.data;
+                })
+                .catch(error => {
+                    this.taskDone = false;
+                    console.log("error", error);
+                }).finally(() => this.checking = false);
+        },
+        next: function () {
+            this.checkTaskDialog = false;
+            this.steps[this.activeStep] = true;
+            this.activeStepIdx++;
+            this.activeStep = Object.keys(this.steps)[this.activeStepIdx]
         },
         finish: function () {
             this.finished = true;
-            console.log('finish him');
+            const url = get_webhook_url()
+            axios
+                .get(`${url}/finish/${this.uuid}`)
+                .then(result => {
+                    console.log("result", result.data);
+                    // reset session
+                    this.uuid = this.uuid4();
+                    localStorage.setItem('session', this.uuid)
+                })
+                .catch(error => console.log("error", error));
+
         }
     }
 });
