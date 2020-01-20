@@ -21,10 +21,10 @@ var evaluation = Vue.component("Evaluation", {
                     <span>Session UUID: {{ uuid }}</span>
                 </small>
                 <br>
-                <md-steppers v-if="!finished" md-alternative md-linear md-dynamic-height :md-active-step.sync="activeStep">
+                <md-steppers v-if="!finished" md-alternative md-linear :md-active-step.sync="activeStep">
                     <md-step id="one" md-label="Pre-questionnaire" :md-done.sync="steps.one" :md-editable="false">
                         <div class="md-layout md-alignment-top-center">
-                            <iframe class="md-image" :src="preQuestUrl" width="640" height="620" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            <iframe class="md-image" :src="preQuestUrl" width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                         <div class="md-layout md-alignment-top-right">
                             <md-button class="md-raised md-primary" @click="confirmPreQuest = true">Next</md-button>
@@ -39,7 +39,7 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 1: middlebox chaining</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox, as depicted below.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -69,7 +69,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 2: rate limiting</h2>
-                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to <b>limit to 100 Mbps</b> the bandwidth torrent traffic can consume.</p>
+                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to limit to 100 Mbps the bandwidth torrent traffic can consume.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -99,7 +99,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 3: usage quotas</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Some students in the dorms have been bing-watching the new season of Game of Thrones. However, apperently, all of them have 4K TVs, which is causing them to download an excessive amount of data. Please use <b>Lumi's</b> chatbot interface on the right to <b>set a 10 GB per week download quota</b> for students in dorms.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Some students in the dorms have been bing-watching the new season of Game of Thrones. However, apperently, all of them have 4K TVs, which is causing them to download an excessive amount of data. Please use <b>Lumi's</b> chatbot interface on the right to set a 10 GB per week download quota for students in dorms.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -129,7 +129,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 4: firewall rules </h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. After careful inspection of the traffic from the research labs, you have noticed that the suspicius traffic from Task 1 originated from students accessing a pirate streaming website F2movies. Please use <b>Lumi's</b> chatbot interface on the right to <b>block F2movies traffic</b> for students in the labs.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. After careful inspection of the traffic from the research labs, you have noticed that the suspicius traffic from Task 1 originated from students accessing a pirate streaming website F2movies. Please use <b>Lumi's</b> chatbot interface on the right to block F2movies traffic for students in the labs.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -159,7 +159,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 5: temporal throttling</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Lately you have received many complaints on traffic congestion during peak hours. Upon further analysis, you realize that some services hosted in the servers have been receiving too many access from 4PM to 7PM everyday. Please use <b>Lumi's</b> chatbot interface on the right to <b>set a 5 Gbps bandwidth limit</b> for the server racks <b>from 4PM to 7PM</b>.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Lately you have received many complaints on traffic congestion during peak hours. Upon further analysis, you realize that some services hosted in the servers have been receiving too many access from 4PM to 7PM everyday. Please use <b>Lumi's</b> chatbot interface on the right to set a 5 Gbps bandwidth limit for the server racks from 4PM to 7PM.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -187,7 +187,7 @@ var evaluation = Vue.component("Evaluation", {
 
                     <md-step id="seven" md-label="Post-questionnaire" :md-done.sync="steps.seven" :md-editable="false">
                         <div class="md-layout md-alignment-top-center">
-                            <iframe class="md-image" :src="postQuestUrl" width="640" height="427" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            <iframe class="md-image" :src="postQuestUrl" width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                         <div class="md-layout md-alignment-top-right">
                             <md-button class="md-raised md-primary" @click="confirmPostQuest = true">Finish</md-button>
@@ -267,6 +267,14 @@ var evaluation = Vue.component("Evaluation", {
             localStorage.setItem('session', this.uuid)
         }
 
+        if (localStorage.getItem('activeStepIdx') !== null) {
+            this.activeStepIdx = localStorage.getItem('activeStepIdx')
+            this.activeStep = Object.keys(this.steps)[this.activeStepIdx]
+            for (i = 0; i < this.activeStepIdx; i++) {
+                this.steps[Object.keys(this.steps)[i]] = true;
+            }
+        }
+
         this.preQuestUrl = `https://docs.google.com/forms/d/e/1FAIpQLSckTXo2rsS5ee0iqEAg60RPUVrRxFT1zxKzSTbnhgOfUUX5JA/viewform?usp=pp_url&entry.1490889930=${this.uuid}&embedded=true`;
         this.postQuestUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfMVkfGkzjJ7Q_AXaMI_kKqRsxPyuKx-egx_j3YLhGI8c_LIQ/viewform?usp=pp_url&entry.156296896=${this.uuid}&embedded=true`;
         this.demoUrl = `../../lib/client/index.html?uuid=${this.uuid}&live=true`
@@ -302,9 +310,11 @@ var evaluation = Vue.component("Evaluation", {
             this.steps[this.activeStep] = true;
             this.activeStepIdx++;
             this.activeStep = Object.keys(this.steps)[this.activeStepIdx]
+            localStorage.setItem('activeStepIdx', this.activeStepIdx)
         },
         finish: function () {
             this.finished = true;
+            localStorage.setItem('activeStepIdx', 0)
             const url = get_webhook_url()
             axios
                 .get(`${url}/finish/${this.uuid}`)
@@ -315,7 +325,6 @@ var evaluation = Vue.component("Evaluation", {
                     localStorage.setItem('session', this.uuid)
                 })
                 .catch(error => console.log("error", error));
-
         }
     }
 });
