@@ -18,13 +18,12 @@ var demo = Vue.component("Demo", {
             <md-app-content>
                 <div class="md-layout">
                     <h2>Welcome to Lumi's demo experiment!</h2>
-                    <p>Thank you very much for helpng us improve our research. The purpose of this experiment is to evaluate the <b>usability</b> of <b>Lumi</b>, the chatbot we built to help network operators manage their networks, allowing them to
-                        express their general intents for the network using natural language. We intend to release a summary of the aggregate results to the research community and use them as part of a scientific article.</p>
+                    <p>Thank you very much for helpng us improve our research. The purpose of this experiment is to evaluate the <b>usability</b> of <b>Lumi</b>, the chatbot we built to help network operators manage their networks, allowing them to express their general intents for the network using natural language. We intend to release a summary of the aggregate results to the research community and use them as part of a scientific article.</p>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center-space-between">
                     <div class="md-layout-item md-size-60 md-small-size-100">
                         <h2>Outline</h2>
-                        <p>The evaluation takes no more than <b>10 minutes</b>, and is composed of 3 steps:</p>
+                        <p>The evaluation takes less than <b>5 minutes</b>, and is composed of 3 steps:</p>
                         <ul>
                             <li><b>Pre-questionnaire</b>: some questions to help us sort the collected data.</li>
                             <li><b>Evaluation</b>: you will be asked to complete some quick network mangement tasks using Lumi.</li>
