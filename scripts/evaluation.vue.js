@@ -39,7 +39,7 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 1: middlebox chaining</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that <b>all traffic</b> from the <b>Internet</b> to the <b>labs</b> is carefully inspected by the <b>Deep Packet Inspection</b> (DPI) middlebox.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -69,7 +69,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 2: rate limiting</h2>
-                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to limit to 100 Mbps the bandwidth torrent traffic can consume.</p>
+                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to limit to <b>100 Mbps</b> the <b>bandwidth</b> <b>torrent traffic</b> can consume.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -219,8 +219,9 @@ var evaluation = Vue.component("Evaluation", {
                             </md-dialog-actions>
                         </template>
                         <template v-else>
-                            <md-dialog-content>
+                            <md-dialog-content class="md-layout md-alignment-center-center">
                                 <md-empty-state class="md-accent" md-icon="sentiment_very_dissatisfied" md-label="Task incomplete" md-description="Apperently you haven't completed the task at hand. Please go back ang give it another try! Try rephrashing your intent!"/>
+                                <p><b>Missing keywords</b>: {{ missingKeywords.join(', ') }}</p>
                             </md-dialog-content>
 
                             <md-dialog-actions>
@@ -251,9 +252,10 @@ var evaluation = Vue.component("Evaluation", {
                 six: false,
                 seven: false
             },
-            finished: false,
+            finished: true,
             checking: false,
             taskDone: false,
+            missingKeywords: [],
             checkTaskDialog: false,
             confirmPreQuest: false,
             confirmPostQuest: false
@@ -298,7 +300,8 @@ var evaluation = Vue.component("Evaluation", {
                 .get(`${url}/check/${this.uuid}/${task}`)
                 .then(result => {
                     console.log("result", result.data);
-                    this.taskDone = result.data;
+                    this.taskDone = result.data.done;
+                    this.missingKeywords = result.data.missing;
                 })
                 .catch(error => {
                     this.taskDone = false;

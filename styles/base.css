@@ -732,3 +732,7 @@ form {
         font-size: 11px
     }
 }
+
+.md-dialog-content {
+    flex-flow: column;
+}
