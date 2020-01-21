@@ -99,7 +99,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 3: usage quotas</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Some students in the dorms have been bing-watching the new season of Game of Thrones. However, apperently, all of them have 4K TVs, which is causing them to download an excessive amount of data. Please use <b>Lumi's</b> chatbot interface on the right to set a 10 GB per week download quota for students in dorms.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Some students in the dorms have been binge-watching the new season of Game of Thrones. However, apperently, all of them have 4K TVs, which is causing them to download an excessive amount of data. Please use <b>Lumi's</b> chatbot interface on the right to set a 10 GB per week download quota for students in dorms.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
