@@ -301,7 +301,7 @@ var evaluation = Vue.component("Evaluation", {
                 .then(result => {
                     console.log("result", result.data);
                     this.taskDone = result.data.done;
-                    this.missingKeywords = result.data.missing;
+                    this.missingKeywords = result.data.missing || [];
                 })
                 .catch(error => {
                     this.taskDone = false;
