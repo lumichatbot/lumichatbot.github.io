@@ -39,7 +39,7 @@ var evaluation = Vue.component("Evaluation", {
                             </div>
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 1: middlebox chaining</h2>
-                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that <b>all traffic</b> from the <b>Internet</b> to the <b>labs</b> is carefully inspected by the <b>Deep Packet Inspection</b> (DPI) middlebox.</p>
+                                <p>Consider the simplified network infrastructure depicted <b>below</b>. Students are accessing suspicius aplications in the labs. Please use <b>Lumi's</b> chatbot interface on the right to ensure that all traffic from the Internet to the labs is carefully inspected by the Deep Packet Inspection (DPI) middlebox.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
@@ -69,7 +69,7 @@ var evaluation = Vue.component("Evaluation", {
                         <div class="md-layout md-gutter md-alignment-bottom-space-between">
                             <div class="md-layout-item md-size-60 md-small-size-100">
                                 <h2>Task 2: rate limiting</h2>
-                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to limit to <b>100 Mbps</b> the <b>bandwidth</b> <b>torrent traffic</b> can consume.</p>
+                                <p>Once again consider the simplified network infrastructure depicted <b>below</b>. Some guest users in the University network have started using torrent applications to download movies. The torrent traffic has overflown some of the network's 10 Gbps and 1 Gbps bandwidth links. Please use <b>Lumi's</b> chatbot interface on the right to limit to 100 Mbps the bandwidth torrent traffic can consume.</p>
 
                                 <div class="md-layout md-gutter md-alignment-center-space-between">
                                     <div class="md-layout-item md-size-50 md-small-size-100 task-image-container">
