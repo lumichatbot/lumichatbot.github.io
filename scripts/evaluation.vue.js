@@ -252,7 +252,7 @@ var evaluation = Vue.component("Evaluation", {
                 six: false,
                 seven: false
             },
-            finished: true,
+            finished: false,
             checking: false,
             taskDone: false,
             missingKeywords: [],
