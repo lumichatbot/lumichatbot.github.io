@@ -2,8 +2,8 @@
  ******************* BASE *******************
  ********************************************/
 :root {
-    --md-theme-default-primary: #2f5287;
-    --md-theme-default-primary-on-background: #2f5287;
+    --md-theme-default-primary: #343f3e;
+    --md-theme-default-primary-on-background: #94b0da;
 }
 
 body {
