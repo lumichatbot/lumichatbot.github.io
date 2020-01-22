@@ -56,6 +56,9 @@ var evaluation = Vue.component("Evaluation", {
                                 <md-card class="chatbot">
                                     <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                                 </md-card>
+                                <div class="md-layout md-alignment-center-center">
+                                    <small>Write <b>cancel</b> at any time to start over.</small>
+                                </div>
                             </div>
                         </div>
 
@@ -86,6 +89,9 @@ var evaluation = Vue.component("Evaluation", {
                                 <md-card class="chatbot">
                                     <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                                 </md-card>
+                                <div class="md-layout md-alignment-center-center">
+                                    <small>Write <b>cancel</b> at any time to start over.</small>
+                                </div>
                             </div>
                         </div>
 
@@ -116,6 +122,9 @@ var evaluation = Vue.component("Evaluation", {
                                 <md-card class="chatbot">
                                     <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                                 </md-card>
+                                <div class="md-layout md-alignment-center-center">
+                                    <small>Write <b>cancel</b> at any time to start over.</small>
+                                </div>
                             </div>
                         </div>
 
@@ -146,6 +155,9 @@ var evaluation = Vue.component("Evaluation", {
                                 <md-card class="chatbot">
                                     <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                                 </md-card>
+                                <div class="md-layout md-alignment-center-center">
+                                    <small>Write <b>cancel</b> at any time to start over.</small>
+                                </div>
                             </div>
                         </div>
 
@@ -176,6 +188,9 @@ var evaluation = Vue.component("Evaluation", {
                                 <md-card class="chatbot">
                                     <iframe class="md-image" allow="microphone;" width="350" height="530" :src="demoUrl"></iframe>
                                 </md-card>
+                                <div class="md-layout md-alignment-center-center">
+                                    <small>Write <b>cancel</b> at any time to start over.</small>
+                                </div>
                             </div>
                         </div>
 
