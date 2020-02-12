@@ -1,29 +1,46 @@
 /********************************************
- ******************* DEMO *******************
+ **************** USER STUDY ****************
  ********************************************/
-.demo .md-app {
+.study .md-app {
     max-height: 100%;
     border: 1px solid rgba(#000, .12);
 }
 
-.demo .md-app-toolbar {
+.study .md-app-toolbar {
     height: 196px;
 }
 
-.demo .logo {
+.study .logo {
     height: auto;
     width: 6em;
     margin: 0;
     padding: 0;
 }
 
-.demo .md-app-content {
+.study .md-app-content {
     height: auto;
 }
 
-.demo .md-card .chatbot {
+.study .md-card .chatbot {
     margin: 0 auto;
     max-width: 350px;
+}
+
+.study .md-image.task-image {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.study .md-steppers-wrapper {
+    min-height: 850px;
+}
+
+.study .stepper-buttons {
+    margin-top: 20px;
+}
+
+.study .md-layout-item.md-size-50.md-small-size-100.task-image-container {
+    padding-right: 0;
 }
 
 @media screen and (min-width: 1366px) {

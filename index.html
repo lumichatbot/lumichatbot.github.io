@@ -35,8 +35,7 @@
 
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/demo.css">
-    <link rel="stylesheet" href="./styles/evaluation.css">
+    <link rel="stylesheet" href="./styles/study.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149370726-1"></script>
     <script>
@@ -67,13 +66,17 @@
     <script src="https://unpkg.com/http-vue-loader"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
+
     <!-- Vue Pages and Components here -->
     <script src='./scripts/config.js'></script>
+    <script src="./scripts/universities.js"></script>
     <script src='./scripts/home.vue.js'></script>
-    <script src='./scripts/demo.vue.js'></script>
-    <script src='./scripts/evaluation.vue.js'></script>
-    <!-- <script src='./scripts/components/toolbar.vue.js'></script> -->
-    <!-- <script src='./scripts/components/card.vue.js'></script> -->
+    <script src='./scripts/study.vue.js'></script>
+    <script src='./scripts/components/about.vue.js'></script>
+    <script src='./scripts/components/modules.vue.js'></script>
+    <script src='./scripts/components/datasets.vue.js'></script>
+    <script src='./scripts/components/study.vue.js'></script>
+    <script src='./scripts/components/code.vue.js'></script>
 
     <script>
         Vue.use(VueRouter);
@@ -84,12 +87,8 @@
                 component: home
             },
             {
-                path: '/demo',
-                component: demo
-            },
-            {
-                path: '/evaluation',
-                component: evaluation
+                path: '/study',
+                component: study
             }
         ]
 

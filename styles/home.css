@@ -1,73 +1,75 @@
 /********************************************
  ******************* HOME *******************
  ********************************************/
-.menu {
+.home .md-app {
+    max-height: 100%;
+    border: 1px solid rgba(#000, .12);
+}
+
+.home .md-app-toolbar {
+    min-height: 270px !important;
+}
+
+.home .md-app-content {
+    height: auto;
+}
+
+.home .md-tabs {
     width: 100%;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
 }
 
-#refinement-image {
+.home .md-card .chatbot {
     margin: 0 auto;
-    text-align: center
+    max-width: 350px;
 }
 
-#refinement-image img {
-    margin-left: -10px;
-    padding: 0;
+.home .modules .md-steppers-wrapper {
+    min-height: 500px;
 }
 
-#menu-center {
+.home .md-image-wrapper {
+    max-width: 800px;
     margin: 0 auto;
-    text-align: center
 }
 
-#menu-center ul {
-    margin: 5px 0 0 0;
+.home .datasets .md-card,
+.home .code .md-card {
+    margin: 10px;
+    max-width: 317px;
+    min-width: 300px;
+    height: fit-content;
 }
 
-#menu-center ul li {
-    list-style: none;
-    margin: 0 0 0 0;
-    display: inline;
+.home .datasets .md-card.university {
+    max-width: 317px;
+    min-width: 300px;
 }
 
-#menu-center ul li a {
-    padding: 25px;
+.home .datasets .md-card-media,
+.home .code .md-card-media {
+    display: flex;
 }
 
-#menu-center ul li a:hover {
-    /* background-color: #ccc; */
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none
+.home .datasets .md-card-media img,
+.home .code .md-card-media img {
+    max-width: 170px;
+    max-height: 200px;
+    min-height: 200px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
-#menu-center ul li a:link {
-    text-decoration: none;
+.home .datasets .md-card-media img.logo {
+    max-width: 70%;
+    max-height: 250px;
+    min-height: 250px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
-#process {
-    text-align: justify;
-}
-
-.menu #menu-center a {
-    color: #cccccc;
-}
-
-.active {
-    color: #fff !important;
-    font-weight: bolder;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.refinement {
-    display: none;
-}
-
-#img-lumi {
-    text-align: center;
+@media screen and (min-width: 1366px) {
+    .md-toolbar {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
 }
