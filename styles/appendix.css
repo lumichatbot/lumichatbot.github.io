@@ -1,0 +1,12 @@
+/********************************************
+ **************** APPENDIX ****************
+ ********************************************/
+.appendix .math.display {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+.appendix .math.inline {
+  font-weight: bold;
+}

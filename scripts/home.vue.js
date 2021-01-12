@@ -28,6 +28,7 @@ var home = Vue.component("Home", {
                         <md-tab id="tab-datasets" md-label="Datasets"><lumi-datasets></lumi-datasets></md-tab>
                         <md-tab id="tab-code" md-label="Code"><lumi-code></lumi-code></md-tab>
                         <md-tab id="tab-study" md-label="User Study"><lumi-study></lumi-study></md-tab>
+                        <md-tab id="tab-appendix" md-label="Appendix"><lumi-appendix></lumi-appendix></md-tab>
                     </md-tabs>
                 </div>
             </md-app-content>
