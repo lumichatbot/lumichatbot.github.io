@@ -14,7 +14,7 @@ Vue.component("lumi-about", {
         </div>
         <div class="md-layout md-gutter md-alignment-top-space-between">
             <div class="md-layout-item md-size-60 md-small-size-100">
-                <h1 class="md-display-1">Demo</h1>
+                <h1 class="md-display-1">Demo*</h1>
                 <p class="md-body-2">Feel free to play around with Lumi's prototype <b>on the right</b>. Some example intents below:</p>
                 <blockquote class="note-block">
                     <p>"Hey Lumi, please block traffic for all students."</p>
@@ -22,6 +22,8 @@ Vue.component("lumi-about", {
                     <p>"Limit bandwidth usage to 50 mbps for professors."</p>
                     <p>"Students can download up to 10 GB per week of data."</p>
                 </blockquote>
+
+                <small>* First attempts may fail due to inactivity in the Heroku free-tier dyno. If so, please refresh the page and try again.</small>
             </div>
             <div class="md-layout-item md-size-40 md-small-size-100">
                 <md-card md-with-hover class="chatbot">
