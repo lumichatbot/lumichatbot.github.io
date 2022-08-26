@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
-        <title>Lumi Chatbot</title>
 
-        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="./assets/favicon/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>Lumi Chatbot</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css" />
-        <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
-        <link rel="stylesheet" href="./styles/base.css" />
-        <link rel="stylesheet" href="./styles/home.css" />
-        <link rel="stylesheet" href="./styles/study.css" />
-        <link rel="stylesheet" href="./styles/appendix.css" />
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css" />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149370726-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/study.css" />
+    <link rel="stylesheet" href="./styles/appendix.css" />
+  </head>
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+  <body>
+    <div class="body-content">
+      <div id="app" v-cloak>
+        <v-app>
+          <router-view></router-view>
+        </v-app>
+      </div>
+    </div>
 
-            gtag('config', 'UA-149370726-1');
-        </script>
-    </head>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-material"></script>
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.min.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
 
-    <body>
-        <div class="body-content">
-            <div id="app" v-cloak>
-                <v-app>
-                    <router-view></router-view>
-                </v-app>
-            </div>
-        </div>
+    <!-- Vue Pages and Components here -->
+    <script src="./scripts/config.js"></script>
+    <script src="./scripts/universities.js"></script>
+    <script src="./scripts/home.vue.js"></script>
+    <script src="./scripts/study.vue.js"></script>
+    <script src="./scripts/components/about.vue.js"></script>
+    <script src="./scripts/components/modules.vue.js"></script>
+    <script src="./scripts/components/datasets.vue.js"></script>
+    <script src="./scripts/components/study.vue.js"></script>
+    <script src="./scripts/components/code.vue.js"></script>
+    <script src="./scripts/components/appendix.vue.js"></script>
 
-        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
-        <script src="https://unpkg.com/vue-material"></script>
-        <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.min.js"></script>
-        <script src="https://unpkg.com/http-vue-loader"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SP5DL5FRPG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-        <!-- Vue Pages and Components here -->
-        <script src="./scripts/config.js"></script>
-        <script src="./scripts/universities.js"></script>
-        <script src="./scripts/home.vue.js"></script>
-        <script src="./scripts/study.vue.js"></script>
-        <script src="./scripts/components/about.vue.js"></script>
-        <script src="./scripts/components/modules.vue.js"></script>
-        <script src="./scripts/components/datasets.vue.js"></script>
-        <script src="./scripts/components/study.vue.js"></script>
-        <script src="./scripts/components/code.vue.js"></script>
-        <script src="./scripts/components/appendix.vue.js"></script>
+      gtag('config', 'G-SP5DL5FRPG');
+    </script>
 
-        <script>
-            Vue.use(VueRouter);
-            Vue.use(VueMaterial.default);
+    <script>
+      Vue.use(VueRouter);
+      Vue.use(VueMaterial.default);
 
-            const routes = [
-                {
-                    path: '/',
-                    component: home,
-                },
-                {
-                    path: '/study',
-                    component: study,
-                },
-            ];
+      const routes = [
+        {
+          path: '/',
+          component: home,
+        },
+        {
+          path: '/study',
+          component: study,
+        },
+      ];
 
-            let router = new VueRouter({
-                // mode: 'history',
-                routes,
-            });
+      let router = new VueRouter({
+        // mode: 'history',
+        routes,
+      });
 
-            var app = new Vue({
-                el: '#app',
-                router,
-            });
-        </script>
-    </body>
+      var app = new Vue({
+        el: '#app',
+        router,
+      });
+    </script>
+  </body>
+
 </html>
