@@ -1,4 +1,4 @@
-Vue.component("lumi-datasets", {
+Vue.component('lumi-datasets', {
     template: `
     <div class="datasets">
         <div class="md-layout">
@@ -10,7 +10,7 @@ Vue.component("lumi-datasets", {
             </p>
         </div>
 
-        <div v-if="!showExtraction && !showConflicts && !showDeployment" class="md-layout md-alignment-center-space-around">
+        <div v-if="!showExtraction && !showAmbiguities && !showDeployment" class="md-layout md-alignment-center-space-around">
             <md-card @click.native="showExtraction = true" md-with-hover>
                 <md-ripple>
                     <md-card-media>
@@ -24,14 +24,14 @@ Vue.component("lumi-datasets", {
                 </md-ripple>
             </md-card>
 
-            <md-card @click.native="showConflicts = true" md-with-hover>
+            <md-card @click.native="showAmbiguities = true" md-with-hover>
                 <md-ripple>
                     <md-card-media>
-                        <img src="./assets/img/exchange.svg" alt="Conflicts Detection">
+                        <img src="./assets/img/exchange.svg" alt="Ambiguities Detection">
                     </md-card-media>
 
                     <md-card-header>
-                        <div class="md-title">Conflicts Detection</div>
+                        <div class="md-title">Ambiguities Detection</div>
                         <div class="md-subhead">Synthetic & Campi</div>
                     </md-card-header>
                 </md-ripple>
@@ -137,12 +137,12 @@ Vue.component("lumi-datasets", {
             </div>
         </div>
 
-        <div v-if="showConflicts">
+        <div v-if="showAmbiguities">
             <div class="md-layout md-alignment-center-left">
-                <md-button class="md-icon-button" @click="showConflicts = false">
+                <md-button class="md-icon-button" @click="showAmbiguities = false">
                     <md-icon>arrow_back</md-icon>
                 </md-button>
-                <h2 class="md-title">Conflicts Detection Datasets</h2>
+                <h2 class="md-title">Ambiguities Detection Datasets</h2>
             </div>
 
             <div class="md-layout">
@@ -153,7 +153,7 @@ Vue.component("lumi-datasets", {
                     </md-card-header>
 
                     <md-card-content>
-                        We considered a standard campus network topology and used known services, groups, and traffic to create random pairs of Nile intents with and without conflict. This effort resulted in five different-sized datasets (100, 1,000, 2,500, 5,000 and 10,000) of pairs of Nile intents that were "hand-annotated" as conflicts or being conflict-free.
+                        We considered a standard campus network topology and used known services, groups, and traffic to create random pairs of Nile intents with and without amibiguity. This effort resulted in five different-sized datasets (100, 1,000, 2,500, 5,000 and 10,000) of pairs of Nile intents that were "hand-annotated" as ambiguities or being amibiguity-free.
                     </md-card-content>
 
                     <md-card-actions md-alignment="right">
@@ -165,16 +165,16 @@ Vue.component("lumi-datasets", {
 
                 <md-card md-with-hover>
                     <md-card-header>
-                        <div class="md-title">Conflicts By University Dataset</div>
+                        <div class="md-title">Ambiguities By University Dataset</div>
                         <div class="md-subhead">Intents in Campi dataset by university</div>
                     </md-card-header>
 
                     <md-card-content>
-                        This dataset is composed of pairs of intents from the Campi dataset (expressed in Nile), to identify conflicts in the policies published by the different universities. Universities with only one intent were discarded because we require at least two intents to check for conflicts. We manually labeled each pair of intents as having a conflict or being conflict-free, and identified its conflict type.
+                        This dataset is composed of pairs of intents from the Campi dataset (expressed in Nile), to identify ambiguities in the policies published by the different universities. Universities with only one intent were discarded because we require at least two intents to check for ambiguities. We manually labeled each pair of intents as having an amibiguity or being amibiguity-free, and identified its amibiguity type.
                     </md-card-content>
 
                     <md-card-actions md-alignment="right">
-                        <md-button class="md-icon-button" href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/conflicts_campi_uni.json">
+                        <md-button class="md-icon-button" href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/ambiguities_campi_uni.json">
                             <md-icon md-src="./assets/img/github.svg"></md-icon>
                         </md-button>
                     </md-card-actions>
@@ -183,16 +183,16 @@ Vue.component("lumi-datasets", {
 
                 <md-card md-with-hover>
                     <md-card-header>
-                        <div class="md-title">Campi Conflicts Dataset</div>
+                        <div class="md-title">Campi Ambiguities Dataset</div>
                         <div class="md-subhead">All pairs of intents in Campi dataset</div>
                     </md-card-header>
 
                     <md-card-content>
-                        This dataset was obtained by pairing intents from the Campi dataset, but without separating intents by university. The resulting dataset consists of 1,221 unique intent pairs that we also manually labeled as having a conflict (71) or being conflict-free (1114) and categorized by type.
+                        This dataset was obtained by pairing intents from the Campi dataset, but without separating intents by university. The resulting dataset consists of 1,221 unique intent pairs that we also manually labeled as having a amibiguity (71) or being amibiguity-free (1114) and categorized by type.
                     </md-card-content>
 
                     <md-card-actions md-alignment="right">
-                        <md-button class="md-icon-button" href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/conflicts_campi_all.json">
+                        <md-button class="md-icon-button" href="https://github.com/lumichatbot/webhook/blob/master/res/dataset/ambiguities_campi_all.json">
                             <md-icon md-src="./assets/img/github.svg"></md-icon>
                         </md-button>
                     </md-card-actions>
@@ -231,15 +231,12 @@ Vue.component("lumi-datasets", {
         return {
             showExtraction: false,
             showCampi: false,
-            showConflicts: false,
+            showAmbiguities: false,
             showDeployment: false,
-            universities: uniList
-        }
-    }
-})
-
-
-
+            universities: uniList,
+        };
+    },
+});
 
 // <div class="md-layout">
 //     <h2 class="md-display-2">Alpha</h2>

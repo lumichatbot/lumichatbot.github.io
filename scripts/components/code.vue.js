@@ -1,4 +1,4 @@
-Vue.component("lumi-code", {
+Vue.component('lumi-code', {
     template: `
     <div class="code">
         <div class="md-layout">
@@ -49,12 +49,12 @@ Vue.component("lumi-code", {
             <md-card md-with-hover>
                 <md-card-header>
                     <div class="md-title">Lumi Webhook</div>
-                    <div class="md-subhead">Assembly, Confirmation & Conflicts</div>
+                    <div class="md-subhead">Assembly, Confirmation & Ambiguities</div>
                 </md-card-header>
 
                 <md-card-content>
                     Webhook RestAPI actions for the Lumi chatbot interface.
-                    This repository contains the code for the Intent Assembly, Intent Confirmation and Conflicts Detection module.
+                    This repository contains the code for the Intent Assembly, Intent Confirmation and Ambiguities Detection module.
                 </md-card-content>
 
                 <md-card-actions md-alignment="right">
@@ -87,6 +87,6 @@ Vue.component("lumi-code", {
     </div>
     `,
     data: function () {
-        return {}
+        return {};
     },
-})
+});

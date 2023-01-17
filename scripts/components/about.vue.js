@@ -1,4 +1,4 @@
-Vue.component("lumi-about", {
+Vue.component('lumi-about', {
     template: `
     <div class="about">
         <div class="md-layout">
@@ -9,7 +9,7 @@ Vue.component("lumi-about", {
                 In this work, we ask: what would it take for, say, a campus network operator to tell the network, using natural language, to "Inspect traffic for the dorm"? How could the network instantly and correctly translate the request into low-level configuration commands and deploy them in the network to accomplish the job it was "asked" to do?
                 <br/>
                 <br/>
-                We answer these questions by presenting the design and implementation of Lumi, a new system that (i) allows operators to express intents in natural language, (ii) uses machine learning and operator feedback to ensure that the translated intents conform with the operator's goals and also do not conflict with currently deployed intents, and (iii) compiles and deploys them correctly in the network. At the core of Lumi's design is our proposed Network Intent Language (Nile) that serves as an abstraction layer between natural language intents and network configuration commands. We evaluate Lumi using synthetic and real campus network policies and show that Lumi extracts entities with high precision and compiles intents in a few milliseconds. We also report on a user study where 88.5% of participants state they would rather use Lumi exclusively or in conjunction with configuration commands.
+                We answer these questions by presenting the design and implementation of Lumi, a new system that (i) allows operators to express intents in natural language, (ii) uses machine learning and operator feedback to ensure that the translated intents conform with the operator's goals and also is not ambiguous with currently deployed intents, and (iii) compiles and deploys them correctly in the network. At the core of Lumi's design is our proposed Network Intent Language (Nile) that serves as an abstraction layer between natural language intents and network configuration commands. We evaluate Lumi using synthetic and real campus network policies and show that Lumi extracts entities with high precision and compiles intents in a few milliseconds. We also report on a user study where 88.5% of participants state they would rather use Lumi exclusively or in conjunction with configuration commands.
             </p>
         </div>
         <div class="md-layout md-gutter md-alignment-top-space-between">
@@ -34,6 +34,6 @@ Vue.component("lumi-about", {
     </div>
     `,
     data: function () {
-        return {}
+        return {};
     },
-})
+});
